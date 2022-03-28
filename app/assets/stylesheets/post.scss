@@ -1,0 +1,30 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+// index post
+.center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.post-block {
+	display: grid;
+	grid-template-columns: 50% 20% 30%;
+}
+.post-block .post-title {
+	background-color: red;
+}
+
+.post-block .post-infos {
+	background-color: yellow;
+}
+
+// show post
+
+.post-comment-row {
+	display: grid;
+	grid-template-columns: 10% 90%;
+}

@@ -1,0 +1,23 @@
+<h1>Feel free to post anything you want!</h1>
+
+<%= form_for @post do |f| %>
+	<% if @post.errors.any? %>
+		<h3>Watch out!</h3>
+		<ul>
+			<% @post.errors.full_messages.each do |msg| %>
+				<li><%= msg %></li>
+			<% end %>
+		</ul>
+	<% end %>
+	<p>
+		<%= f.label :title %><br />
+		<%= f.text_field :title %>
+	</p>
+
+	<p>
+		<%= f.label :description %><br />
+		<%= f.text_area :body %>
+	</p>
+	
+	<%= f.submit "save" %>
+<% end %>
