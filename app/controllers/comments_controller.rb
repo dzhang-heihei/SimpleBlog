@@ -11,8 +11,9 @@ class CommentsController < ApplicationController
 	end
 
 	def create
-		params[:comment][:user_id] = 3
 		@comment = @post.comments.new(comment_params)
+		@post.user = current_user
+		
 		if @comment.save!
 			redirect_to post_comments_path, notice: "Post saved!"
 		else
