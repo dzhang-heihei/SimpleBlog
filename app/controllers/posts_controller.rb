@@ -1,12 +1,9 @@
 class PostsController < ApplicationController
+    before_action :authenticate_user!    
     before_action :set_post, only: [:show, :destroy]
 
     def index
       @posts = Post.order(created_at: :desc)
-
-      respond_to do |format|
-        format.html
-      end
     end
 
     def show

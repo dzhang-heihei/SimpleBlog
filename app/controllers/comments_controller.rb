@@ -1,4 +1,6 @@
 class CommentsController < ApplicationController
+	before_action :authenticate_user!
+	
 	before_action :set_post, only: [:index, :create]
 	before_action :new_comment, only: [:index]
 

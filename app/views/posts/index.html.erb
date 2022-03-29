@@ -1,22 +1,20 @@
 <div>
-	<%if current_user %>
-		<% @posts.each do |post| %>
-			<div class="post-block">
-				<div class="start-end-space"> </div>
-				<div class="post-title">
-					<h3><%= link_to post.title, post_comments_path(post) %><button><%= link_to 'Delete', post_path(post), method: :delete %></button></h3>
-					<p><%= post.body %></p>
-				</div>
-
-				<div class="post-comments center">
-					<p><%= post.comments_number %> comments</p>
-				</div>
-
-				<div class="post-infos center">
-					<p>Posted by <%= post.post_author %> <br>on <%= post.posted_date_time %></p>
-				</div>
-				<div class="start-end-space"> </div>
+	<% @posts.each do |post| %>
+		<div class="post-block">
+			<div class="start-end-space"> </div>
+			<div class="post-title">
+				<h3><%= link_to post.title, post_comments_path(post) %><button><%= link_to 'Delete', post_path(post), method: :delete %></button></h3>
+				<p><%= post.body %></p>
 			</div>
-		<% end %>
+
+			<div class="post-comments center">
+				<p><%= post.comments_number %> comments</p>
+			</div>
+
+			<div class="post-infos center">
+				<p>Posted by <%= post.post_author %> <br>on <%= post.posted_date_time %></p>
+			</div>
+			<div class="start-end-space"> </div>
+		</div>
 	<% end %>
 </div>
