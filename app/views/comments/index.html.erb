@@ -27,7 +27,7 @@
 			</div>
 
 			<div class="post-comment-infos center">
-				<% if @post.can_delete?(current_user) %>
+				<% if comment.can_delete?(current_user) %>
 					<p><%= comment.posted_date_time %><%= button_to "Delete", post_comment_path(@post, comment), data: { confirm: "Are you sure?" }, method: :delete %></p>
 				<% else %>
 					<p><%= comment.posted_date_time %></p>
