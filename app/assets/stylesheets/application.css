@@ -13,10 +13,15 @@
  *= require_tree .
  *= require_self
  */
+
+html {
+	background-color: rgb(100, 123, 193);
+}
+
 .nav-container {
   display: grid;
 	grid-template-columns: 15% 85%;
-  background-color: green;
+  background-color: rgb(67, 92, 169);
 }
 
 .center2 {
