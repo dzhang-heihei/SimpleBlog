@@ -3,12 +3,7 @@
 		<div class="post-block">
 			<div class="start-end-space"> </div>
 			<div class="post-title">
-				<% if post.can_delete?(current_user) %>
 					<h3><%= link_to post.title, post_comments_path(post) %></h3>
-				<% else %>
-					<h3><%= link_to post.title, post_comments_path(post) %></h3>
-				<% end %>
-
 				<p><%= post.body %></p>
 			</div>
 
@@ -17,7 +12,11 @@
 			</div>
 
 			<div class="post-infos center">
-				<p>Posted by <%= post.post_author %> <br>on <%= post.posted_date_time %><%= button_to "Delete", post_path(post), data: { confirm: "Are you sure?" }, method: :delete %></p>
+				<% if post.can_delete?(current_user) %>
+					<p>Posted by <%= post.post_author %> <br>on <%= post.posted_date_time %><%= button_to "Delete", post_path(post), data: { confirm: "Are you sure?" }, method: :delete %></p>
+				<% else %>
+					<p>Posted by <%= post.post_author %> <br>on <%= post.posted_date_time %></p>
+				<% end %>
 			</div>
 			<div class="start-end-space"> </div>
 		</div>
