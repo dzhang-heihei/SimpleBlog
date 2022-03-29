@@ -27,7 +27,7 @@
 			</div>
 
 			<div class="post-comment-infos center">
-				<p><%= comment.posted_date_time %><%= button_to "Delete", post_comments_path(comment), data: { confirm: "Are you sure?" }, method: :delete %></p>
+				<p><%= comment.posted_date_time %><%= button_to "Delete", post_comment_path(@post, comment), data: { confirm: "Are you sure?" }, method: :delete %></p>
 			</div>
 		</div>
 		<div> </div>
