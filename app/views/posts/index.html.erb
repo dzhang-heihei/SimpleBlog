@@ -1,11 +1,10 @@
-<tbody>
+<div>
 	<%if current_user %>
-		<button><%= link_to 'New Post', new_post_path %></button>
-		<button><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></button>
 		<% @posts.each do |post| %>
 			<div class="post-block">
+				<div class="start-end-space"> </div>
 				<div class="post-title">
-					<h3><%= link_to post.title, post_comments_path(post) %></h3>
+					<h3><%= link_to post.title, post_comments_path(post) %><button><%= link_to 'Delete', post_path(post), method: :delete %></button></h3>
 					<p><%= post.body %></p>
 				</div>
 
@@ -16,13 +15,11 @@
 				<div class="post-infos center">
 					<p>Posted by <%= post.post_author %> <br>on <%= post.posted_date_time %></p>
 				</div>
+				<div class="start-end-space"> </div>
 			</div>
-
-			<button><%= link_to 'Delete', post_path(post), :confirm => 'Are yousure?', :method => :delete %></button>
 		<% end %>
-
 	<%else%>
 		<button><%= link_to 'Sign In', new_user_session_path %></button>
 		<button><%= link_to 'Sign Up', new_user_registration_path %></button>
 	<% end %>
-</tbody>
+</div>
