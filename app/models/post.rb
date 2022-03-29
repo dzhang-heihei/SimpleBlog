@@ -16,4 +16,16 @@ class Post < ApplicationRecord
 	def comments_number
 		comments.size
 	end
+
+	def delete!(current_user)
+		if can_delete?(current_user)
+			self.destroy!
+		else
+			raise "You don't have permission!"
+		end
+	end
+
+	def can_delete?(current_user)
+		user == current_user
+	end
 end

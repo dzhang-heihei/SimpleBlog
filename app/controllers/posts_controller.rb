@@ -26,9 +26,8 @@ class PostsController < ApplicationController
     end
 
     def destroy
-      if @post.destroy!
+      if @post.delete!
         redirect_to posts_path
-      else
       end
     end
 
