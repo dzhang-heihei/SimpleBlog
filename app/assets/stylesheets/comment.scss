@@ -1,0 +1,22 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.post-comment-row {
+	display: grid;
+	grid-template-columns: 15% 20% 50% 15%;
+}
+
+.comment-block {
+	display: grid;
+	grid-template-columns: 15% 85%;
+	margin-top: 50px;
+}
+
+.post-comment-author ,.post-comment-body {
+	border-bottom-style: solid;
+}
+
+.post-comment-row.top-bottom-space {
+	margin: 20px 0px 20px 0px;
+}

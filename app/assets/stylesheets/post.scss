@@ -2,8 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
-// index post
 .center {
 	display: flex;
 	justify-content: center;
@@ -12,19 +10,14 @@
 
 .post-block {
 	display: grid;
-	grid-template-columns: 50% 20% 30%;
-}
-.post-block .post-title {
-	background-color: red;
+	grid-template-columns: 15% 35% 15% 25% 15%;
 }
 
-.post-block .post-infos {
-	background-color: yellow;
+.post-title, .post-comments, .post-infos {
+	border-bottom-style: solid;
 }
 
-// show post
-
-.post-comment-row {
+.new-post-block {
 	display: grid;
-	grid-template-columns: 10% 90%;
+	grid-template-columns: 15% 70% 15%;
 }
