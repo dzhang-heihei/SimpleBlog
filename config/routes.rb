@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root "posts#index"
   resources :posts, only: [:index, :new, :show, :create, :destroy] do
-    resources :comments, only: [:index, :create, :new]
+    resources :comments, only: [:index, :create, :new, :destroy]
   end
 
 

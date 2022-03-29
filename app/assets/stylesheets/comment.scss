@@ -4,7 +4,7 @@
 
 .post-comment-row {
 	display: grid;
-	grid-template-columns: 15% 20% 50% 15%;
+	grid-template-columns: 15% 15% 35% 20% 15%;
 }
 
 .comment-block {
@@ -13,7 +13,7 @@
 	margin-top: 50px;
 }
 
-.post-comment-author ,.post-comment-body {
+.post-comment-author ,.post-comment-body, .post-comment-infos {
 	border-bottom-style: solid;
 }
 

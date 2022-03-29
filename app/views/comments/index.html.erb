@@ -9,6 +9,9 @@
 			<h3><%= @post.title %></h3>
 			<p><%= @post.body %></p>
 		</div>
+		<div class="post-comment-infos center">
+				<p><%= @post.posted_date_time %></p>
+			</div>
 		<div> </div>
 	</div>
 
@@ -21,6 +24,10 @@
 
 			<div class="post-comment-body">
 				<p><%= comment.body %></p>
+			</div>
+
+			<div class="post-comment-infos center">
+				<p><%= comment.posted_date_time %><%= button_to "Delete", post_comments_path(comment), data: { confirm: "Are you sure?" }, method: :delete %></p>
 			</div>
 		</div>
 		<div> </div>

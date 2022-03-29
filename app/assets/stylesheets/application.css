@@ -24,7 +24,7 @@ html {
   background-color: rgb(67, 92, 169);
 }
 
-.center2 {
+.center {
 	display: flex;
 	justify-content: center;
 	align-items: center;

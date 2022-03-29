@@ -3,6 +3,7 @@ class CommentsController < ApplicationController
 	
 	before_action :set_post, only: [:index, :create]
 	before_action :new_comment, only: [:index]
+	before_action :set_comment, only: [:destroy]
 
 	def index
 		@comments = @post.comments.order(created_at: :asc)
@@ -23,7 +24,10 @@ class CommentsController < ApplicationController
 		end
 	end
 
-	def delete
+	def destroy
+		if @comment.delete!(current_user)
+			redirect_to post_comments_path, notice: "Post deleted!"
+		end
 	end
 
 	private
