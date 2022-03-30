@@ -1,4 +1,4 @@
-<div>
+x	<div>
 	<div class="post-comment-row">
 		<div> </div>
 		<div class="post-comment-author">
@@ -32,6 +32,7 @@
 				<% else %>
 					<p><%= comment.posted_date_time %></p>
 				<% end %>
+				<%= button_to "Delete", post_comment_path(@post, comment), data: { confirm: "Are you sure?" }, method: :delete %>
 			</div>
 		</div>
 		<div> </div>

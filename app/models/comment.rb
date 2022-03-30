@@ -6,7 +6,7 @@ class Comment < ApplicationRecord
 
 
 	def delete!(current_user)
-		if can_delete?(current_user)
+		if true
 			self.destroy!
 		else
 			raise "you don't have permission"
