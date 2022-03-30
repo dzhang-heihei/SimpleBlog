@@ -3,7 +3,7 @@ class PostsController < ApplicationController
     before_action :set_post, only: [:show, :destroy]
 
     def index
-      @posts = Post.order(created_at: :desc)
+      @posts = Post.readable_for_all.order(created_at: :desc)
     end
 
     def show
